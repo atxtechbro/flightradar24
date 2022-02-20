@@ -1,8 +1,9 @@
 # flightradar24 #
-Display Top 10 Watched Flights from flightradar24.com
-
-##Example of query run on Sunday, February 20, 2022:##
-_milirary aircraft such as FORTE11 tend not to have all the data_
+### Display Top 10 Watched Flights from flightradar24.com
+```
+$ fr.py
+```
+#### Example of query on Sunday, February 20, 2022
 
 | flight_id | flight | callsign | squawk | clicks | from_iata | from_city | to_iata | to_city |
 | --------- | ------ | -------- | ------ | ------ | --------- | --------- | ------- | ------- |
