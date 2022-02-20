@@ -11,6 +11,4 @@ r = requests.get(url, headers=headers)
 
 j = json.loads(r.text)
 df = pd.DataFrame(j['data'])
-df.set_index('flight_id', inplace=True)
-
-print(df)
+df.set_index('flight_id')
