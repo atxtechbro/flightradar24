@@ -17,3 +17,17 @@ $ fr.py
 2ae2c419 | PS601 | AUI601 | 4541 | 2360 | KBP | Kyiv | GYD | Baku
 2ae2bc6d | TK286 | THY286 | 6245 | 1936 | MSQ | Minsk | IST | Istanbul
 2ae2bf47 | FR3826 | RYR6BU | 5576 | 1704 | KBP | Kyiv | NAP | Naples
+
+
+### F.A.Q's
+#### I see from_iata and to_iata - what is that?
+An IATA airport code[^1], also known as an IATA location identifier, IATA station code, or simply a location identifier, is a three-letter geocode designating many airports and metropolitan areas around the world, defined by the International Air Transport Association (IATA).
+
+#### Is the data sorted in any way?
+Not by the Python script but on the back-end. The data is sorted in descending order by **clicks** which is also called a **view** thus top 10 viewed aircraft as per project title
+
+#### How is null data represented?
+It is represented by the text string **None**
+
+
+[^1]: * [Airline and Location Code Search](https://www.iata.org/en/publications/directories/code-search/). _International Air Traffic Association_. Retrieved 2022-02-20.
