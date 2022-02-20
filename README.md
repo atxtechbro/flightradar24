@@ -4,8 +4,7 @@ Display Top 10 Watched Flights from flightradar24.com
 ##Example of query run on Sunday, February 20, 2022:
 _milirary aircraft such as FORTE11 tend not to have all the data_
 
-           flight callsign squawk  clicks from_iata     from_city to_iata   to_city
-flight_id                                                                          
+flight_id flight callsign squawk  clicks from_iata     from_city to_iata   to_city                                                                          
 2ae24bf7     None  FORTE11   2051   18768      None          None    None      None
 2ae2b969   TK1476   THY9ZF   4527    4464       HRK       Kharkiv     IST  Istanbul
 2ae17b1c     None   JAKE12   3551    3972       MHZ    Mildenhall    None      None
