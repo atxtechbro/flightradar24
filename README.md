@@ -29,5 +29,8 @@ Not by the Python script but on the back-end. The data is sorted in descending o
 #### How is null data represented?
 It is represented by the text string **None**
 
+#### How did you find the API endpoint?
+I loaded the page https://flightradar24.com and hit f12 to observe the network tab. Once the data was loaded, I looked for all json responses with status code 200. That's usually a good place to start looking for this type of data. It's easy to find from there. The key is to not waste your time looking for it without using this to hone in on the right neighborhood. Otherwise it can be kind of tedious like finding a needle in a haystack.
+
 
 [^1]: * [Airline and Location Code Search](https://www.iata.org/en/publications/directories/code-search/). _International Air Traffic Association_. Retrieved 2022-02-20.
