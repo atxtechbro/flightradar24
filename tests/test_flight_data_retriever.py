@@ -1,5 +1,6 @@
 import unittest
 from unittest.mock import MagicMock, patch
+
 from src.flight_data_retriever import FlightDataRetriever
 
 
