@@ -1,5 +1,3 @@
-Sure, here's a basic `CONTRIBUTING.md` file for your project:
-
 ```markdown
 # Contributing to Flightradar24 Data Analyzer
 
@@ -42,7 +40,7 @@ At this point, you're ready to make your changes! Feel free to ask for help; eve
 At this point, you should switch back to your master branch and make sure it's up to date with Flightradar24 Data Analyzer's master branch:
 
 ```sh
-git remote add upstream git@github.com:atxtechbro/flightradar24.git
+git remote add upstream https://github.com/atxtechbro/flightradar24.git
 git checkout master
 git pull upstream master
 ```
@@ -76,5 +74,3 @@ A PR can only be merged into master by a maintainer if:
 1. It is passing CI.
 2. It has been approved by at least one maintainer. If it was a maintainer who opened the PR, only an additional maintainer can approve it.
 ```
-
-Please replace `325-add-japanese-localisation` with the actual branch name related to the issue you're working on. Also, replace `git@github.com:atxtechbro/flightradar24.git` with the actual URL of your repository.
