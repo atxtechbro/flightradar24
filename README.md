@@ -1,7 +1,7 @@
 # flightradar24 #
 ### Display Top 10 Watched Flights from flightradar24.com
 ```
-$ fr.py
+$ flight_data_retriever.py
 ```
 #### Example of query on Sunday, February 20, 2022
 

@@ -15,7 +15,16 @@ class FlightDataRetriever:
 
     def retrieve_flight_data(self):
         logging.info('Sending request to %s', self.api_endpoint)
-        response = requests.get(self.api_endpoint, headers=self.headers)
+        try:
+            response = requests.get(
+                self.api_endpoint,
+                headers=self.headers,
+                timeout=5
+            )
+        except requests.Timeout:
+            logging.error('Request to %s timed out', self.api_endpoint)
+            return None
+
         response.raise_for_status()  # Raise HTTPError for bad responses
 
         json_data = json.loads(response.text)
@@ -24,6 +33,17 @@ class FlightDataRetriever:
 
         logging.info('Successfully retrieved flight data')
         return flight_data
+
+    def analyze_flight_data(self):
+        flight_data = self.retrieve_flight_data()
+
+        most_common_departure_city = flight_data['from_city'].mode().get(0)
+        most_common_arrival_city = flight_data['to_city'].mode().get(0)
+
+        logging.info("The most common departure city is: %s",
+                     most_common_departure_city)
+        logging.info("The most common arrival city is: %s",
+                     most_common_arrival_city)
 
 
 # Usage
@@ -35,4 +55,4 @@ headers = {
 }
 
 flight_data_retriever = FlightDataRetriever(api_endpoint, headers)
-flight_data = flight_data_retriever.retrieve_flight_data()
+flight_data_retriever.analyze_flight_data()
