@@ -1,7 +1,10 @@
 import json
 import pandas as pd
+import logging
+
 import requests
 
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
 class FlightDataRetriever:
     def __init__(self, api_endpoint, headers):
@@ -9,6 +12,7 @@ class FlightDataRetriever:
         self.headers = headers
 
     def retrieve_flight_data(self):
+        logging.info('Sending request to %s', self.api_endpoint)
         response = requests.get(self.api_endpoint, headers=self.headers)
         response.raise_for_status()  # Raise HTTPError for bad responses
 
@@ -16,6 +20,7 @@ class FlightDataRetriever:
         flight_data = pd.DataFrame(json_data.get('data', []))
         flight_data.set_index('flight_id', inplace=True)
 
+        logging.info('Successfully retrieved flight data')
         return flight_data
 
 
