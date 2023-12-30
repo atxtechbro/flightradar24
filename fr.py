@@ -1,8 +1,6 @@
 import json
-
 import pandas as pd
 import requests
-
 
 headers = {
     'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) '
@@ -11,8 +9,8 @@ headers = {
 }
 
 api_endpoint = "https://www.flightradar24.com/flights/most-tracked"
-r = requests.get(api_endpoint, headers=headers)
+response = requests.get(api_endpoint, headers=headers)
 
-j = json.loads(r.text)
-df = pd.DataFrame(j['data'])
-df.set_index('flight_id')
+json_data = json.loads(response.text)
+flight_data = pd.DataFrame(json_data['data'])
+flight_data.set_index('flight_id', inplace=True)
