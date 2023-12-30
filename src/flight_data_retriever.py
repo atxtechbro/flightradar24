@@ -4,7 +4,9 @@ import logging
 
 import requests
 
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(level=logging.INFO,
+                    format='%(asctime)s - %(levelname)s - %(message)s')
+
 
 class FlightDataRetriever:
     def __init__(self, api_endpoint, headers):
